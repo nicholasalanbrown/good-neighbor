@@ -1,13 +1,27 @@
-# buffalo
+# good-neighbor
 
-A Claude Code skill that makes Claude respond like a proud Buffalo, NY native — the
+Buffalo's nickname is **the City of Good Neighbors** — so that's the name of this repo,
+and it's the marketplace that ships the **buffalo** persona.
+
+`buffalo` is a skill that makes your agent respond like a proud Buffalo, NY native: the
 warm-hearted opposite of a masshole. Relentlessly nice, unbothered by lake-effect snow,
 obsessed with wings and beef on weck, and devoted to the Bills and Sabres through every
-last heartbreak.
+last heartbreak — while still giving you a genuinely useful answer.
 
 Inspired by [MeffaKev/masshole](https://github.com/MeffaKev/masshole).
 
-## Installation
+### Naming, so it's not confusing
+
+| Thing | Name | Why |
+|---|---|---|
+| This repo / the marketplace | `good-neighbor` | Buffalo's civic motto |
+| The plugin & skill | `buffalo` | the persona itself |
+| The command | `/buffalo` | what you type to turn it on |
+
+That's why you install `buffalo@good-neighbor` — the `buffalo` plugin *from* the
+`good-neighbor` marketplace.
+
+## Install (Claude Code)
 
 Add the marketplace, then install the plugin:
 
@@ -16,32 +30,32 @@ Add the marketplace, then install the plugin:
 /plugin install buffalo@good-neighbor
 ```
 
-(`buffalo@good-neighbor` means the `buffalo` plugin from the `good-neighbor` marketplace.)
-
 ## Usage
 
 ```
 /buffalo
 ```
 
-Once active, Claude responds in full Buffalo voice for the session. Add a question after
-it to get an answer in character right away:
+Once active, your agent stays in full Buffalo voice for the rest of the session. Tack a
+question on to get an in-character answer right away:
 
 ```
 /buffalo why is my build failing
 ```
 
+Ask it to drop the voice anytime and it will, no hard feelings.
+
 ## Use with Hermes (or any Agent Skills client)
 
 The persona lives in `skills/buffalo/SKILL.md`, which follows the open
-[Agent Skills](https://agentskills.io) standard (`name` + `description` frontmatter).
-That means it's portable — the `.claude-plugin/` manifests and the `/buffalo` slash
-command are just the Claude Code convenience layer on top.
+[Agent Skills](https://agentskills.io) standard (`name` + `description` frontmatter). The
+`.claude-plugin/` manifests and the `/buffalo` command are just the Claude Code wrapper
+on top — the skill folder itself is portable.
 
-For [Hermes Agent](https://hermes-agent.org/), drop the skill folder in and invoke it:
+For [Hermes Agent](https://hermes-agent.org/), drop the folder in and invoke it:
 
 ```
-# copy skills/buffalo into Hermes' skills dir
+# copy the skill into Hermes' skills dir
 cp -r skills/buffalo ~/.hermes/skills/buffalo
 
 # then, in a session:
@@ -52,6 +66,17 @@ hermes -s buffalo
 ```
 
 The same `skills/buffalo/` folder works in any Agent Skills–compatible client.
+
+## Built to run full-time (token-light)
+
+The skill uses progressive disclosure so it's cheap to leave on:
+
+- **Idle:** only the ~70-token description is loaded, so an installed-but-unused skill
+  costs almost nothing.
+- **Active:** `SKILL.md` holds a lean core (voice, opinions, transform rules, boundaries).
+- **On demand:** the deep stuff — food vocabulary, neighborhoods, the full Bills/Sabres
+  gospel — lives in `references/buffalo-lore.md` and only loads when a conversation
+  actually touches food, places, or the teams.
 
 ## What to expect
 
@@ -71,15 +96,15 @@ The same `skills/buffalo/` folder works in any Agent Skills–compatible client.
 ```
 good-neighbor/
 ├── .claude-plugin/
-│   ├── marketplace.json
-│   └── plugin.json
+│   ├── marketplace.json   # the "good-neighbor" marketplace
+│   └── plugin.json        # the "buffalo" plugin
 ├── commands/
-│   └── buffalo.md        # the /buffalo slash command
+│   └── buffalo.md         # the /buffalo slash command (Claude Code)
 ├── skills/
 │   └── buffalo/
-│       └── SKILL.md      # the persona definition (lean core)
+│       └── SKILL.md       # the persona definition (lean core)
 ├── references/
-│   └── buffalo-lore.md   # food, geography, sports — loaded on demand
+│   └── buffalo-lore.md    # food, geography, sports — loaded on demand
 ├── LICENSE
 └── README.md
 ```
