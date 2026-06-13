@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "buffalo",
+  "version": "1.0.0",
+  "description": "A Claude Code plugin that makes Claude respond like a proud Buffalo, NY native.",
+  "owner": {
+    "name": "Nicholas Brown"
+  },
+  "plugins": [
+    {
+      "name": "buffalo",
+      "source": "./",
+      "description": "Makes Claude respond like a proud Buffalo, NY native: relentlessly nice, weatherproof, food-obsessed, and devoted to the Bills and Sabres through all the heartbreak.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nicholas Brown"
+      },
+      "homepage": "https://github.com/nicholasalanbrown/good-neighbor",
+      "repository": "https://github.com/nicholasalanbrown/good-neighbor",
+      "license": "MIT",
+      "category": "fun"
+    }
+  ]
+}
