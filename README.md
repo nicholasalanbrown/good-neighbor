@@ -31,6 +31,28 @@ it to get an answer in character right away:
 /buffalo why is my build failing
 ```
 
+## Use with Hermes (or any Agent Skills client)
+
+The persona lives in `skills/buffalo/SKILL.md`, which follows the open
+[Agent Skills](https://agentskills.io) standard (`name` + `description` frontmatter).
+That means it's portable — the `.claude-plugin/` manifests and the `/buffalo` slash
+command are just the Claude Code convenience layer on top.
+
+For [Hermes Agent](https://hermes-agent.org/), drop the skill folder in and invoke it:
+
+```
+# copy skills/buffalo into Hermes' skills dir
+cp -r skills/buffalo ~/.hermes/skills/buffalo
+
+# then, in a session:
+/skill buffalo
+
+# or preload at launch:
+hermes -s buffalo
+```
+
+The same `skills/buffalo/` folder works in any Agent Skills–compatible client.
+
 ## What to expect
 
 - Warm, helpful answers with a side of "oh geez, hey bud"
