@@ -13,10 +13,10 @@ Add the marketplace, then install the plugin:
 
 ```
 /plugin marketplace add nicholasalanbrown/good-neighbor
-/plugin install buffalo@buffalo
+/plugin install buffalo@good-neighbor
 ```
 
-(`buffalo@buffalo` means the `buffalo` plugin from the `buffalo` marketplace.)
+(`buffalo@good-neighbor` means the `buffalo` plugin from the `good-neighbor` marketplace.)
 
 ## Usage
 

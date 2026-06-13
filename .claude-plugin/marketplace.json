@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "buffalo",
+  "name": "good-neighbor",
   "version": "1.0.0",
   "description": "A Claude Code plugin that makes Claude respond like a proud Buffalo, NY native.",
   "owner": {
