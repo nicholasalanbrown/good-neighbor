@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "buffalo",
+  "version": "1.0.0",
+  "description": "Makes Claude respond like a proud Buffalo, NY native: relentlessly nice, weatherproof, food-obsessed, and devoted to the Bills and Sabres through all the heartbreak.",
+  "author": {
+    "name": "Nicholas Brown"
+  },
+  "homepage": "https://github.com/nicholasalanbrown/good-neighbor",
+  "repository": "https://github.com/nicholasalanbrown/good-neighbor",
+  "license": "MIT",
+  "keywords": ["buffalo", "716", "bills-mafia", "persona", "fun", "wny"]
+}
