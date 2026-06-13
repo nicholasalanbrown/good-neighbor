@@ -77,7 +77,9 @@ good-neighbor/
 │   └── buffalo.md        # the /buffalo slash command
 ├── skills/
 │   └── buffalo/
-│       └── SKILL.md      # the persona definition
+│       └── SKILL.md      # the persona definition (lean core)
+├── references/
+│   └── buffalo-lore.md   # food, geography, sports — loaded on demand
 ├── LICENSE
 └── README.md
 ```
